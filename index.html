@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Creative - Beranda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Logo ARC.png" alt="Logo AR Creative" class="logo">
+                </a>
+                  <h1>PT. ARKA RADHIKA KREATIF </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-lang="id">Beranda</a><a href="index.html" data-lang="en" style="display:none;">Home</a></li>
+                    <li><a href="about.html" data-lang="id">Tentang Kami</a><a href="about.html" data-lang="en" style="display:none;">About</a></li>
+                    <li><a href="services.html" data-lang="id">Layanan</a><a href="services.html" data-lang="en" style="display:none;">Services</a></li>
+                    <li><a href="portfolio.html" data-lang="id">Portofolio</a><a href="portfolio.html" data-lang="en" style="display:none;">Portfolio</a></li>
+                    <li><a href="contact.html" data-lang="id">Kontak</a><a href="contact.html" data-lang="en" style="display:none;">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button onclick="setLanguage('id')">ID</button>
+                <button onclick="setLanguage('en')">EN</button>
+            </div>
+            
+            <button onclick="toggleMode()" id="mode-toggle">
+                <img src="moon.png" alt="Dark Mode">
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <h2 data-lang="id">Selamat Datang di AR Creative</h2>
+        <h2 data-lang="en" style="display:none;">Welcome to AR Creative</h2>
+        <p data-lang="id">Kami adalah agensi digital kreatif yang memberikan solusi inovatif untuk bisnis Anda.</p>
+        <p data-lang="en" style="display:none;">We are a creative digital agency providing innovative solutions for your business.</p>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <a href="https://wa.me/+6281332899100" target="_blank">
+                    <img src="whatsapp.png" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://instagram.com/arcreativ.id" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://tiktok.com/@arcreative.id" target="_blank">
+                    <img src="tiktok.png" alt="TikTok" class="social-icon">
+                </a>
+            </div>
+            
+            <p data-lang="id">&copy; 2024 AR Creative. Semua hak dilindungi.</p>
+            <p data-lang="en" style="display:none;">&copy; 2024 AR Creative. All rights reserved.</p>
+        </div>
+            <p>Inspire, Connect, Succeed, in One Solution. </p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

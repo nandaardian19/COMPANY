@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Creative - Portofolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Logo ARC.png" alt="Logo AR Creative" class="logo">
+                </a>
+                <h1>PT. ARKA RADHIKA KREATIF</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <span id="current-date"></span>
+            <button onclick="toggleMode()" id="mode-toggle">
+                <img src="moon.png" alt="Dark Mode">
+            </button>
+        </div>
+    </header>
+    <section id="portfolio">
+        <h2>Portofolio Kami</h2>
+
+        <div class="carousel">
+            <div class="carousel-item" data-category="foto-produk">
+                <img src="yt.png" alt="Foto Produk">
+                <p>Foto Produk</p>
+            </div>
+            <div class="carousel-item" data-category="manajemen-media-sosial">
+                <img src="jup.png" alt="Manajemen Media Sosial">
+                <p>Manajemen Media Sosial</p>
+            </div>
+            <div class="carousel-item" data-category="pengembangan-website">
+                <img src="rog.png" alt="Pengembangan Website">
+                <p>Pengembangan Website</p>
+            </div>
+            <div class="carousel-item" data-category="host-live-shopping">
+                <img src="gar.png" alt="Host Live Shopping">
+                <p>Host Live Shopping</p>
+            </div>
+        </div>
+
+        <div id="portfolio-content">
+            <!-- Konten portofolio akan dimuat di sini berdasarkan kategori yang dipilih -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <a href="https://wa.me/+6281332899100" target="_blank">
+                    <img src="whatsapp.png" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://instagram.com/arcreativ.id" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://tiktok.com/@arcreative.id" target="_blank">
+                    <img src="tiktok.png" alt="TikTok" class="social-icon">
+                </a>
+            </div>
+            
+            <p>© 2024 AR Creative. Semua hak dilindungi.</p>
+            <p>Inspire, Connect, Succeed, in One Solution.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+     <script src="scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: true
+            });
+
+            $('.carousel-item').on('click', function() {
+                var category = $(this).data('category');
+                loadPortfolioContent(category);
+            });
+
+            function loadPortfolioContent(category) {
+                var content = '';
+                if (category === 'foto-produk') {
+                    content = `
+                        <h3>Foto Produk</h3>
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a href="brand1-foto-produk.html">
+                                    <img src="yt.png" alt="Brand 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand2-foto-produk.html">
+                                    <img src="oi.png" alt="Brand 2">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand3-foto-produk.html">
+                                    <img src="jh.png" alt="Brand 3">
+                                </a>
+                            </div>
+                        </div>`;
+                } else if (category === 'manajemen-media-sosial') {
+                    content = `
+                        <h3>Manajemen Media Sosial</h3>
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a href="brand1-strategi-media-sosial.html">
+                                    <img src="jup.png" alt="Brand 4">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand2-strategi-media-sosial.html">
+                                    <img src="GLIZ_HIJAB.png" alt="Brand 5">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand3-strategi-media-sosial.html">
+                                    <img src="ep.png" alt="Brand 6">
+                                </a>
+                            </div>
+                        </div>`;
+                } else if (category === 'pengembangan-website') {
+                    content = `
+                        <h3>Pengembangan Website</h3>
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a href="brand1-web-development.html">
+                                    <img src="rog.png" alt="Brand 7">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand2-web-development.html">
+                                    <img src="orgn.png" alt="Brand 8">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand3-web-development.html">
+                                    <img src="gar.png" alt="Brand 9">
+                                </a>
+                            </div>
+                        </div>`;
+                } else if (category === 'host-live-shopping') {
+                    content = `
+                        <h3>Host Live Shopping</h3>
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <a href="brand1-live-shopping.html">
+                                    <img src="gar.png" alt="Brand 1">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand2-live-shopping.html">
+                                    <img src="gar.png" alt="Brand 2">
+                                </a>
+                            </div>
+                            <div class="gallery-item">
+                                <a href="brand3-live-shopping.html">
+                                    <img src="gar.png" alt="Brand 3">
+                                </a>
+                            </div>
+                        </div>`;
+                }
+                $('#portfolio-content').html(content);
+            }
+        });
+    </script>
+
+</body>
+</html>
