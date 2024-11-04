@@ -1154,5 +1154,1229 @@ body.dark-mode .language-switcher button:hover {
     font-size: 24px;
     margin: 0 10px;
     color: #ff4500;
+}body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+    background-size: cover;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
 }
+
+body.dark-mode {
+    
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode header {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #ffcc00;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(255, 204, 0, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .header-container {
+    background-color: rgba(68, 68, 68, 0.9);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Add gap between logo and header text */
+}
+
+.logo {
+    height: 50px; /* Size of the logo */
+}
+
+h1 {
+    margin: 1;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+body.dark-mode nav ul li a {
+    color: #ffcc00;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #ffcc00;
+    transform: scale(1.05);
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#mode-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+body.dark-mode section {
+    background-color: rgba(68, 68, 68, 0.9);
+    color: #ffcc00;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+footer {
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 0px 0; /* Tambahkan padding atas dan bawah untuk memperbesar area footer */
+    position: flexibel;
+    width: 0;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    
+    transition: background-color 0.3s, color 0.3s;
+    border-style: solid; /* Or keep it as defined */
+    border-width: 1px; /* Adjust this value to make it thinner */
+    padding-top: 20px; /* Sesuaikan untuk bagian atas */
+    padding-bottom: 5px; /* Sesuaikan untuk bagian bawah */
+}
+
+body.dark-mode footer {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #ffcc00;
+}
+
+footer a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+        padding: 5px 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Additional for services page */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    flex: 1 1 calc(50% - 40px);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark-mode .service-card {
+    background-color: rgba(68, 68, 68, 0.9);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+body.dark-mode h3 {
+    color: #ffcc00;
+}
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: calc(50% - 20px);
+    max-width: 300px;
+    text-align: center;
+    padding: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img.service-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* Gallery page */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .gallery-item {
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.1);
+}
+
+body.dark-mode .gallery-item:hover {
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.2);
+}
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('MOBIL.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
+}
+
+body.dark-mode {
+    background: url('MOBIL.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode header {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #ffcc00;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(255, 204, 0, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .header-container {
+    background-color: rgba(68, 68, 68, 0.9);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Add gap between logo and header text */
+}
+
+.logo {
+    height: 50px; /* Size of the logo */
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+body.dark-mode nav ul li a {
+    color: #ffcc00;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #ffcc00;
+    transform: scale(1.05);
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#mode-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode section {
+    background-color: rgba(68, 68, 68, 0.9);
+    color: #ffcc00;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+body.dark-mode h2 {
+    color: #ffcc00;
+}
+
+footer {
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+   
+    transition: background-color 0.3s, color 0.3s;
+    border-bottom: 0.1px;
+    padding-bottom: 0.01px;
+}
+
+body.dark-mode footer {
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #ffcc00;
+}
+
+footer a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+        padding: 1px 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Additional for services page */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    flex: 1 1 calc(50% - 40px);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark-mode .service-card {
+    background-color: rgba(68, 68, 68, 0.9);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+body.dark-mode h3 {
+    color: #ffcc00;
+}
+
+/* Gallery page */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .gallery-item {
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.1);
+}
+
+body.dark-mode .gallery-item:hover {
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.2);
+}
+/* Contact Info styling */
+.contact-info {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    text-align: center; 
+}
+
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.contact-info a:hover {
+    transform: scale(1.05);
+}
+
+.contact-icon {
+    width: 20px; /* Ukuran ikon yang lebih kecil */
+    height: 20px;
+}
+
+#current-date {
+    margin-right: 15px;
+    font-size: 1em;
+    color: #333;
+}
+
+body.dark-mode #current-date {
+    color: #ffcc00;
+}
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-right: 15px;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-switcher button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .language-switcher button {
+    border: 1px solid #ffcc00;
+    color: #ffcc00;
+}
+
+body.dark-mode .language-switcher button:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+.intro-box,
+.vision-box {
+    text-align: center;
+    font-size: 1.2em;
+    color: #444;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    margin-bottom: 20px; 
+}
+
+.intro-box:hover,
+.vision-box:hover {
+    transform: scale(1.05);
+    background: #e9e9e9; 
+}
+
+.mission-header h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.circular-diagram {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circle-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.circle h3 {
+    margin: 0;
+    font-size: 36px;
+    color: #ff4500;
+}
+
+.circle p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.circle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.circle h3 {
+    margin: 0;
+    color: #333;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.circle p {
+    color: #444;
+    font-size: 1em;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-details {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-box {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.content-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.steps,
+.reasons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.step,
+.reason {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.step:hover,
+.reason:hover {
+    transform: scale(1.05);
+}
+
+.step h4,
+.reason h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.step p,
+.reason p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.packages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.package {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.package:hover {
+    transform: scale(1.05);
+}
+
+.package h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.package p {
+    color: #666;
+    font-size: 1.1em;
+}
+/* Tambahkan ini ke file styles.css Anda */
+
+/* Tambahkan ini ke file styles.css Anda */
+
+/* Gaya untuk bagian paket dengan pamflet */
+.package {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-image: url('pattern.png'); /* Ganti dengan URL gambar motif yang Anda inginkan */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.package h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.package p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .package {
+        width: 100%;
+    }
+}
+/* Tambahkan ini ke file styles.css Anda */
+
+/* Gaya untuk carousel */
+.carousel {
+    margin: 20px 0;
+}
+
+.carousel-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Gaya untuk galeri */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Tambahkan ini ke file styles.css Anda */
+
+/* Gaya untuk paragraf di bagian "Apa Itu Sosial Media Management?" dan "Mengapa Sosial Media Management?" */
+.content-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* Gaya untuk gambar di dalam content-box */
+.content-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Gaya untuk judul di dalam content-box */
+.content-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Gaya untuk content-box */
+.content-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .content-box {
+        padding: 15px;
+    }
+
+    .content-box h3 {
+        font-size: 1.5em;
+    }
+
+    .content-box p {
+        font-size: 1em;
+    }
+}
+/* Menambahkan gaya untuk bagian Cara Kerja */
+/* Menambahkan gaya untuk bagian Cara Kerja */
+.content-box {
+    margin-bottom: 20px;
+}
+
+.content-box h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.content-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-box ul li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px 20px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.content-box ul li:hover {
+    transform: translateY(-5px);
+}
+
+.content-box ul li strong {
+    font-size: 18px;
+    color: #333;
+    margin-right: 15px;
+}
+
+.content-box ul li::before {
+    content: "\2022";
+    color: #ff4500;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 10px;
+}
+
+.content-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.content-box img.content-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+/* Menambahkan gaya untuk diagram proses */
+.process-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.process-step {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.process-arrow {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ff4500;
+}
+/* Menambahkan gaya untuk diagram SDLC */
+.sdlc-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.sdlc-step {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.sdlc-step:hover {
+    transform: translateY(-5px);
+}
+
+.sdlc-arrow {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #ff4500;
+}
+/* Memastikan body memenuhi tinggi viewport */
+/* Pastikan body memenuhi tinggi viewport */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menambah jarak di bagian bawah section agar tidak terlalu dekat dengan footer */
+.section {
+    flex-grow: 1;
+    padding: 50px 20px;
+    margin-bottom: 300px; /* Jarak lebih besar untuk memberi ruang ekstra ke footer */
+    box-sizing: border-box;
+}
+
+/* Menambah jarak ekstra di bawah konten layanan */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 80px; /* Tambahan jarak di bawah konten agar lebih jauh dari footer */
+}
+
+/* Styling untuk footer agar tetap di bawah */
+footer {
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Tambahan jarak untuk menurunkan footer lebih ke bawah */
+    border-top: 3px solid #333;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk ikon sosial di footer */
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+
 
